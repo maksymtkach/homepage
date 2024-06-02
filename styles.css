@@ -294,3 +294,18 @@ blockquote {
     color: var(--quote-text-color);
     font-style: italic;
 }
+
+/* Name hover effect */
+
+.name-hover::before {
+    content: "Maksym Tkach";
+}
+
+.name-hover:hover::after {
+    content: "Just Max ";
+    color: var(--text-decoration-color);
+}
+.name-hover:hover::before {
+    content: "";
+    color: var(--text-decoration-color);
+}
