@@ -8,15 +8,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
     --durability-text-color: #6a737d9c;
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
+    --quote-border-color: #d0d7de;
+    --quote-text-color: #57606a;
+    --quote-background-color: #f6f8fa;
 }
 
+/* Container styles */
 .container {
     margin: 0 auto;
     padding: 0 30px;
@@ -35,6 +38,7 @@ body {
     justify-content: space-between;
 }
 
+/* Resume block styles */
 .resume {
     margin: 50px auto;
     border: 1px solid #f5f5f5;
@@ -49,6 +53,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Media queries */
 @media screen and (max-width: 576px) {
 
     .main-info,
@@ -221,18 +226,46 @@ body {
     padding-left: 20px;
 }
 
+/* Additional info styles */
 .additional-info {
     flex: 1 1 40%;
 }
 
-.additional-info__education {
+.additional-info__education,
+.additional-info__languages,
+.additional-info__quotes,
+.additional-info__likes,
+.additional-info__strengths,
+.additional-info__weaknesses,
+.additional-info__skills,
+.additional-info__hobbies {
     margin-bottom: 20px;
 }
 
-.additional-info__education-header {
-    color: var(--secondary-text-color);
+.additional-info__education-header,
+.additional-info__languages-header,
+.additional-info__quotes-header,
+.additional-info__likes-header,
+.additional-info__strengths-header,
+.additional-info__weaknesses-header,
+.additional-info__skills-header,
+.additional-info__hobbies-header {
+    color: var(--primary-text-color);
     text-align: left;
     margin-bottom: 20px;
+}
+
+.additional-info__education-university,
+.additional-info__languages-item,
+.additional-info__quotes-item,
+.additional-info__likes-item,
+.additional-info__strengths-item,
+.additional-info__weaknesses-item,
+.additional-info__skills-item,
+.additional-info__hobbies-item {
+    padding-left: 20px;
+    margin-left: 20px;
+    color: var(--secondary-text-color);
 }
 
 .additional-info__education-university-durability {
@@ -252,16 +285,12 @@ body {
     color: var(--secondary-text-color);
 }
 
-.additional-info__languages {
-    margin-bottom: 20px;
-}
-
-.additional-info__languages-header {
-    color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.additional-info__languages-item {
-    color: var(--secondary-text-color);
+/* Styles for blockquotes */
+blockquote {
+    border-left: 4px solid var(--quote-border-color);
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: var(--quote-background-color);
+    color: var(--quote-text-color);
+    font-style: italic;
 }
